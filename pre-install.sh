@@ -50,3 +50,8 @@ wget https://faculty.washington.edu/browning/beagle/beagle.r1399.jar && \
 
 ## shapeit4 has to be run through singularity
 ## taniguti/shapeit4
+##
+## singularity build shapeit4.sif docker://taniguti/shapeit4
+##
+## mount optionsuch as --bind might be needed
+## singularity exec shapeit4.sif  shapeit4
