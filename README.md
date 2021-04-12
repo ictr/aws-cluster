@@ -8,7 +8,10 @@ pip install awscli aws-parallelcluster
 
 ### Create a EC3 key pair
 
-Go to AWS console, and create a key pair, which is region specific (I use 'us-east-2')
+Go to AWS console, and [create a key pair](https://us-east-2.console.aws.amazon.com/ec2/v2/home?region=us-east-2#Home:),
+ which is region specific (I use 'us-east-2')
+
+Save the pem file to for example `~/.aws/pcluster.pem` and `chmod 600 ~/.aws/pcluster.pem`.
 
 ### Run pcluster configure
 
