@@ -100,6 +100,14 @@ All current generation instance types support enhanced networking, except for T2
 
 Storage price differ: https://aws.amazon.com/ebs/pricing/
 
+### Pre-install scripts
+
+scripts need to be a bash file referred to by its URL in config file.
+
+Check log file:
+
+log into the cluser, check `/var/log/cfn-init.log`
+
 
 ### Create cluster
 
