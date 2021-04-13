@@ -24,8 +24,8 @@ wget https://cnsgenomics.com/software/gcta/bin/gcta_1.93.2beta.zip && \
 
 # need to get a newer version of libstdc++
 wget https://repo.anaconda.com/miniconda/Miniconda3-4.7.12-Linux-x86_64.sh && \
-    bash Anaconda3-2019.07-Linux-x86_64.sh -b -p /home/centos/anaconda3 && \
-    cp /home/centos/anaconda3/lib/libstdc++.so.6.0.26 /usr/lib64 && \
+    bash Miniconda3-4.7.12-Linux-x86_64.sh -b -p /usr/share/anaconda3 && \
+    cp /usr/share/centos/anaconda3/lib/libstdc++.so.6.0.26 /usr/lib64 && \
     rm /usr/lib64/libstdc++.so.6 && \
     ln -s /usr/lib64/libstdc++.so.6.0.26 /usr/lib64/libstdc++.so.6
 
@@ -39,7 +39,7 @@ wget https://www.well.ox.ac.uk/~gav/resources/qctool_v2.0.8-CentOS_Linux7.6.1810
 
 ## plink
 wget http://s3.amazonaws.com/plink1-assets/plink_linux_x86_64_20201019.zip && \
-    unzip plink_linux_x86_64_20201019.zip \
+    unzip plink_linux_x86_64_20201019.zip && \
     mv plink /usr/local/bin
 
 
