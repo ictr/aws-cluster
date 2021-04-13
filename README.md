@@ -108,6 +108,11 @@ Check log file:
 
 log into the cluser, check `/var/log/cfn-init.log`
 
+### Shared directory
+
+```
+shared_dir = /shared
+```
 
 ### Create cluster
 

@@ -18,6 +18,10 @@ vpc_settings = default
 queue_settings = compute
 pre_install = https://raw.githubusercontent.com/ictr/aws-cluster/main/pre-install.sh
 
+# shared_dir = /shared
+# s3_read_resource = arn:aws:s3:::my_corporate_bucket*
+# s3_read_write_resource = arn:aws:s3:::my_corporate_bucket/*
+
 
 [vpc default]
 vpc_id = vpc-07fffc8eecc89384a
@@ -34,3 +38,12 @@ compute_resource_settings = default
 instance_type = t2.small
 max_count = 500
 
+[ebs default]
+shared_dir = shared
+# sc1 Cold HDD,
+# st1 throughput optimized HDD
+# io1, io2, SSD
+# gp2, gp3, general purpose SSD
+#volume_type = st1
+# default to 500 Gb for sc1 and st1
+#volume_size = 500
