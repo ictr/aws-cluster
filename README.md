@@ -8,8 +8,7 @@ pip install awscli aws-parallelcluster
 
 ### Create a EC3 key pair
 
-Go to AWS console, and [create a key pair](https://us-east-2.console.aws.amazon.com/ec2/v2/home?region=us-east-2#Home:),
- which is region specific (I use 'us-east-2')
+Go to AWS console, EC2, create a key pair, which is region specific (I use 'us-east-2')
 
 Save the pem file to for example `~/.aws/pcluster.pem` and `chmod 600 ~/.aws/pcluster.pem`.
 
@@ -27,6 +26,11 @@ NOTE: For real cluster, we will need to choose more powerful computing nodes.
 1. Head node in a public subnet and compute fleet in a private subnet
 2. Head node and compute fleet in the same public subnet <--- this would allow computing nodes to access internset
 
+* t3.large ===> 0.0832 hourly cost (on demand)
+   2 CPU, 8G RAM, Up to 5 Gigabit network
+* t4g.large ===> 0.0672 with the same configuration
+
+* st1: EBS throughput optimized HDD volumes
 
 ```
 /.parallelcluster/config will be written.
@@ -120,7 +124,7 @@ pcluster create mycluster
 
 
 ```
- ✗ pcluster create mycluster
+ ✗ pcluster create ictr-seq
 Beginning cluster creation for cluster: mycluster
 Creating stack named: parallelcluster-mycluster
 Status: parallelcluster-mycluster - CREATE_COMPLETE
