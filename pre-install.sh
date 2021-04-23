@@ -37,9 +37,13 @@ echo '# install miniconda to get libstdc++'
 echo '#'
 echo '#'
 # need to get a newer version of libstdc++
-wget https://repo.anaconda.com/miniconda/Miniconda3-4.7.12-Linux-x86_64.sh && \
-    bash Miniconda3-4.7.12-Linux-x86_64.sh -b -p /usr/share/anaconda3 && \
-    cp /usr/share/anaconda3/lib/libstdc++.so.6.0.26 /usr/lib64 && \
+#wget https://repo.anaconda.com/miniconda/Miniconda3-4.7.12-Linux-x86_64.sh && \
+#    bash Miniconda3-4.7.12-Linux-x86_64.sh -ubp /usr/share/anaconda3 && \
+#    cp /usr/share/anaconda3/lib/libstdc++.so.6.0.26 /usr/lib64 && \
+#    rm /usr/lib64/libstdc++.so.6 && \
+#    ln -s /usr/lib64/libstdc++.so.6.0.26 /usr/lib64/libstdc++.so.6
+wget https://raw.githubusercontent.com/ictr/aws-cluster/main/resource/qctool_lib -O libstdc++.so.6.0.26 && \
+    mv -f libstdc++.so.6.0.26 /usr/lib64 && \
     rm /usr/lib64/libstdc++.so.6 && \
     ln -s /usr/lib64/libstdc++.so.6.0.26 /usr/lib64/libstdc++.so.6
 
