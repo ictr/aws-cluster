@@ -1,18 +1,6 @@
 #
 # CENTOS 7 base_os
 #
-
-echo '#'
-echo '#'
-echo '# install singularity'
-echo '#'
-echo '#'
-yum update -y && \
-    yum install -y epel-release && \
-    yum update -y && \
-    yum install -y singularity
-
-
 echo '#'
 echo '#'
 echo '# install snptest'
@@ -82,6 +70,17 @@ echo '#'
 wget https://faculty.washington.edu/browning/beagle/beagle.r1399.jar && \
     mv -f beagle.r1399.jar /usr/local/bin/
 
+
+
+echo '#'
+echo '#'
+echo '# install singularity (slow due to yum update)'
+echo '#'
+echo '#'
+yum update -y && \
+    yum install -y epel-release && \
+    yum update -y && \
+    yum install -y singularity
 
 
 echo '#'

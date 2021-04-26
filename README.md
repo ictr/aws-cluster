@@ -148,3 +148,12 @@ Use AWS CloudFormmation to check the status of cluster.
 ```
 sbatch
 ```
+
+
+## Creation Policies
+
+Creation of cluster fails due to the use of pre-install scripts.
+
+We need to create an creation policy
+
+This video has some information https://www.youtube.com/watch?v=30RTG2e8yJs
