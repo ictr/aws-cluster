@@ -1892,7 +1892,7 @@ Resources:
         InstanceTypesData: !Ref InstanceTypesData
       TemplateURL: !Sub
         - >-
-          https://${AWS::Region}-aws-parallelcluster.s3.${AWS::Region}.${s3_url}/templates/master-server-substack-${version}.cfn.yaml
+          https://raw.githubusercontent.com/ictr/aws-cluster/main/policies/parallelcluster-ictr-seq-MasterServerSubstack.yaml
         - s3_url: !FindInMap
             - Partition2Url
             - !Ref 'AWS::Partition'
