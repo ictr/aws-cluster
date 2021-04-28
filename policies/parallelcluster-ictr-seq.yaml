@@ -1892,7 +1892,7 @@ Resources:
         InstanceTypesData: !Ref InstanceTypesData
       TemplateURL: !Sub
         - >-
-          https://s3.console.aws.amazon.com/s3/object/ictr-seq?region=us-east-1&prefix=parallelcluster-ictr-seq-MasterServerSubstack.yaml
+          https://ictr-seq.s3.amazonaws.com/parallelcluster-ictr-seq-MasterServerSubstack.yaml
         - s3_url: !FindInMap
             - Partition2Url
             - !Ref 'AWS::Partition'

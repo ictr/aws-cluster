@@ -16,7 +16,9 @@ master_instance_type = t3.large
 base_os = centos7
 vpc_settings = default
 queue_settings = compute
-pre_install = https://raw.githubusercontent.com/ictr/aws-cluster/main/pre-install.sh
+pre_install = https://ictr-seq.s3.amazonaws.com/pre-install.sh
+template_url = https://ictr-seq.s3.amazonaws.com/parallelcluster-ictr-seq.yaml
+scaling_settings = custom
 
 [vpc default]
 vpc_id = vpc-0137f9fbefbc444ac
@@ -30,7 +32,7 @@ enable_efa_gdr = false
 compute_resource_settings = default
 
 [compute_resource default]
-instance_type = t3.large
+instance_type = t3.2xlarge
 min_count = 1
 max_count = 100
 
@@ -39,3 +41,5 @@ shared_dir = shared
 volume_type = st1
 volume_size = 500
 
+[scaling custom]
+scaledown_idletime = 15
