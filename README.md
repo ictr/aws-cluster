@@ -1,10 +1,11 @@
 ## Admin
 
 ### Create a conda environment
-
+```
 conda create -n aws python=3.8
 conda activate aws
 pip install awscli aws-parallelcluster
+```
 
 ### Create a EC3 key pair
 
